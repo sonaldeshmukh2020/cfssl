@@ -12,6 +12,8 @@ jobs:
       matrix:
         go: [stable, oldstable]
     services:
+      docker:
+         image: docker:dind
       # Label used to access the service container
       postgres:
         # Docker Hub image
