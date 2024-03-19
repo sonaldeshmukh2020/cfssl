@@ -9,7 +9,7 @@ on:
       - "v*"
 jobs:
   build-and-push-image:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     permissions:
       contents: read
       packages: write
@@ -23,8 +23,8 @@ jobs:
             image: ghcr.io/cloudflare/cfssl
           # docker test publish, todo: switch to service account
           - registry: ""
-            username: nicky
-            password_secret: DOCKER_REGISTRY_TOKEN_NICKY
+            username: sonal123890
+            password_secret: SampadaDeshmukh2000
             image: cfssl/cfssl
     steps:
       - name: Checkout repository
